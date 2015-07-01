@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--复制此文档各种Ioc定义方式到需要的地方-->
+<objects xmlns="http://www.springframework.net">
+
+  <object name="formMain" type="TypeTest.UI.FormMain, TypeTest">
+    <property name="msgQueue" ref="msgQueue"/>
+    <property name="formRackConfig" ref="formRackConfig"/>
+    <property name="formTestConfig" ref="formTestConfig"/>
+    <property name="formAbout" ref="formAbout"/>
+    <property name="testedRacks" ref="testedRacks"/>
+    <property name="udp" ref="udp"/>
+    <property name="snmpManager" ref="snmpManager"/>
+    <property name="report" ref="report"/>
+    <property name="errorDescription" ref="errorDescription"/>
+  </object>
+
+  <object name="formRackConfig" type="TypeTest.UI.FormRackConfig, TypeTest">
+    <property name="rackNum" value="2"/>
+    <property name="rackStartNum" value="1"/>
+    <property name="slotNum" value="14"/>
+    <property name="slotStartNum" value="2"/>
+    <property name="rackTypes">
+      <list element-type="string">
+        <value>空</value>
+        <value>采集机笼</value>
+        <value>驱动机笼</value>
+      </list>
+    </property>
+    <property name="rackTypesPort">
+      <list element-type="int">
+        <value>0</value>
+        <value>5555</value>
+        <value>8888</value>
+      </list>
+    </property>
+    <property name="rackBoardTypes">
+      <list>
+        <list element-type="string">
+          <value>空</value>
+        </list>
+        <list element-type="string">
+          <value>空</value>
+          <value>VIIB板</value>
+        </list>
+        <list element-type="string">
+          <value>空</value>
+          <value>VOOB板</value>
+          <value>CDDM板</value>
+        </list>
+      </list>
+    </property>
+    <property name="testedRacks" ref="testedRacks"/>
+  </object>
+
+  <object name="formTestConfig" type="TypeTest.UI.FormTestConfig, TypeTest">
+    <property name="testedRacks" ref="testedRacks"/>
+  </object>
+
+  <object name="formAbout" type="TypeTest.UI.FormAbout, TypeTest">
+    <property name="version" ref="version" />
+  </object>
+
+</objects>

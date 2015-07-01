@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7FCF66B6-A15C-4D33-BE0E-226B13B8836D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TypeTest</RootNamespace>
+    <AssemblyName>TypeTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>Lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>Lib\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Dart.Snmp">
+      <HintPath>Lib\Dart.Snmp.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=8.5.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="iptb">
+      <HintPath>Lib\iptb.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsian">
+      <HintPath>Lib\iTextAsian.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsianCmaps">
+      <HintPath>Lib\iTextAsianCmaps.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>Lib\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="Ribbon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="SnmpSharpNet, Version=0.9.0.0, Culture=neutral, PublicKeyToken=b2181aa3b9571feb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SnmpSharpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=2.0.0.40000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Scheduling.Quartz20">
+      <HintPath>Lib\Spring.Scheduling.Quartz20.dll</HintPath>
+    </Reference>
+    <Reference Include="Summer.ES">
+      <HintPath>Lib\Summer.ES.dll</HintPath>
+    </Reference>
+    <Reference Include="Summer.System, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Summer.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Summer.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Summer.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Summer.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Summer.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.SocketBase, Version=1.5.3.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SuperSocket.SocketBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\MsgQueue.cs" />
+    <Compile Include="Common\Original.cs" />
+    <Compile Include="Common\OriginalBytes.cs" />
+    <Compile Include="Common\OriginalSnmp.cs" />
+    <Compile Include="Common\Status.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Common\Version.cs" />
+    <Compile Include="Common\RxQueue.cs" />
+    <Compile Include="Model\Board.cs" />
+    <Compile Include="Model\BoardStatusEventArgs.cs" />
+    <Compile Include="Model\ErrorCodeMsgFile.cs" />
+    <Compile Include="Model\ErrorDescription.cs" />
+    <Compile Include="Model\Rack.cs" />
+    <Compile Include="Model\Report.cs" />
+    <Compile Include="Model\StatusEventArgs.cs" />
+    <Compile Include="Model\TestedRacks.cs" />
+    <Compile Include="Model\TestStatusEventArgs.cs" />
+    <Compile Include="Model\TimeoutEventArgs.cs" />
+    <Compile Include="Net\SnmpManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Net\Udp.cs" />
+    <Compile Include="Protocol\BaseMessage.cs" />
+    <Compile Include="Protocol\ErrorCodeMsg.cs" />
+    <Compile Include="Protocol\HeartMsg.cs" />
+    <Compile Include="Protocol\HeartTimeoutMsg.cs" />
+    <Compile Include="Protocol\IdleMsg.cs" />
+    <Compile Include="Protocol\ProtocolFactory.cs" />
+    <Compile Include="UI\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormRackConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormRackConfig.Designer.cs">
+      <DependentUpon>FormRackConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormTestConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTestConfig.Designer.cs">
+      <DependentUpon>FormTestConfig.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormRackConfig.resx">
+      <DependentUpon>FormRackConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTestConfig.resx">
+      <DependentUpon>FormTestConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Report\Data\database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templet\main.doc" />
+    <None Include="Templet\main.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+    <Folder Include="Thread\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\log4net.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.db.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.job.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.ui.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.common.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.net.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\spring.model.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\spring.protocol.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Aspose.Cells.dll" />
+    <Content Include="Lib\C5.dll" />
+    <Content Include="Lib\Common.Logging.dll" />
+    <Content Include="Lib\Dart.Snmp.dll" />
+    <Content Include="Lib\DevComponents.DotNetBar2.dll" />
+    <Content Include="Lib\iptb.dll" />
+    <Content Include="Lib\iTextAsian.dll" />
+    <Content Include="Lib\iTextAsianCmaps.dll" />
+    <Content Include="Lib\itextsharp.dll" />
+    <Content Include="Lib\log4net.dll" />
+    <Content Include="Lib\NPOI.dll" />
+    <Content Include="Lib\Quartz.dll" />
+    <Content Include="Lib\Ribbon.dll" />
+    <Content Include="Lib\Ribbon.pdb" />
+    <Content Include="Lib\SnmpSharpNet.dll" />
+    <Content Include="Lib\Spring.Aop.dll" />
+    <Content Include="Lib\Spring.Core.dll" />
+    <Content Include="Lib\Spring.Data.dll" />
+    <Content Include="Lib\Spring.Scheduling.Quartz20.dll" />
+    <Content Include="Lib\Summer.ES.dll" />
+    <Content Include="Lib\Summer.System.dll" />
+    <Content Include="Lib\Summer.UI.dll" />
+    <Content Include="Lib\Summer.Web.dll" />
+    <Content Include="Lib\SuperSocket.SocketBase.dll" />
+    <Content Include="Lib\System.Data.SQLite.dll" />
+    <Content Include="Lib\System.Data.SQLite.Linq.dll" />
+    <Content Include="Report\Data\readme.txt" />
+    <Content Include="Resouces\about.png" />
+    <Content Include="Resouces\casco.ico" />
+    <Content Include="Resouces\casco.png" />
+    <Content Include="Resouces\casco_icon.png" />
+    <Content Include="Resouces\folder.png" />
+    <Content Include="Resouces\help.png" />
+    <Content Include="Resouces\rack_setting.png" />
+    <Content Include="Resouces\start.png" />
+    <Content Include="Resouces\stop.png" />
+    <Content Include="Resouces\test_setting.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

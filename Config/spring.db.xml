@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--复制此文档各种Ioc定义方式到需要的地方-->
+<objects xmlns='http://www.springframework.net'
+  xmlns:db="http://www.springframework.net/database">
+
+  <!--<db:provider id="dbProvider" provider="System.Data.SQLite" 
+               connectionString="Data Source=./Report/Data/database.db;Version=3;Password=casco123"/>-->
+
+  <object id="dbProvider" type="Summer.System.Data.SmrDbProvider, Summer.System">
+    <constructor-arg value="System.Data.SQLite"/>
+    <constructor-arg value="3d9bb15fada88e8b6f00e6a9817625a0011feaf3d2376b543603ac41cfcd2f1f1163fb3909b3400bd9ff9c707f06c3ea3349586d970f625104083528a15a5182cf182b9cf50c5679"/>
+  </object>
+  
+  <object id="adoTemplate" type="Spring.Data.Generic.AdoTemplate, Spring.Data">
+    <property name="DbProvider" ref="dbProvider"/>
+  </object>
+  
+</objects>

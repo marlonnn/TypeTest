@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--复制此文档各种Ioc定义方式到需要的地方-->
+<objects xmlns="http://www.springframework.net">
+  
+  <object name="errorCodeMsg" type="TypeTest.Protocol.ErrorCodeMsg, TypeTest">
+  </object>
+
+  <object name="heartMsg" type="TypeTest.Protocol.HeartMsg, TypeTest">
+  </object>
+
+  <object name="heartTimeoutMsg" type="TypeTest.Protocol.HeartTimeoutMsg, TypeTest">
+  </object>
+
+  <object name="idleMsg" type="TypeTest.Protocol.IdleMsg, TypeTest">
+  </object>
+
+  <object name="protocolFactory" type="TypeTest.Protocol.ProtocolFactory, TypeTest">
+    <property name="rxQueue" ref="rxQueue"/>
+    <property name="msgQueue" ref="msgQueue"/>
+    <property name="defaultDecoder" ref="errorCodeMsg"/>
+    <property name="decoders">
+      <dictionary>
+        <entry key="0x7E" value-ref="heartTimeoutMsg" />
+        <entry key="0x7F" value-ref="heartMsg" />
+        <entry key="0xFF" value-ref="idleMsg" />
+      </dictionary>
+    </property>
+  </object>
+  
+</objects>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--复制此文档各种Ioc定义方式到需要的地方-->
+<objects xmlns="http://www.springframework.net">
+
+  <object name="testedRacks" type="TypeTest.Model.TestedRacks, TypeTest">
+    <property name="msgQueue" ref="msgQueue"/>
+    <property name="errorCodeMsgFile" ref="errorCodeMsgFile"/>
+    <property name="preTimeout" value="3"/>
+    <property name="runTimeout" value="300"/>
+  </object>
+
+  <object name="errorCodeMsgFile" type="TypeTest.Model.ErrorCodeMsgFile, TypeTest">
+    <property name="errorDescription" ref="errorDescription"/>
+  </object>
+
+  <object name="report" type="TypeTest.Model.Report, TypeTest">
+    <property name="testedRacks" ref="testedRacks"/>
+    <property name="version" ref="version"/>
+    <property name="templetFile" value="/Templet/main.pdf"/>
+    <property name="endString" value="-END-"/>
+    <property name="reportTitle" value="ECID型式试验测试报告"/>
+    <property name="fontFile" value="C:/WINDOWS/Fonts/SimHei.TTF"/>
+    <property name="fontSizeHead" value="6"/>
+    <property name="fontSizeBody" value="11"/>
+  </object>
+
+  <object name="errorDescription" type="TypeTest.Model.ErrorDescription, TypeTest">
+    <property name="dict">
+      <dictionary>
+        <entry key="0x0D" value="SDDM板在CAN_A上丢失"/>
+        <entry key="0x0E" value="SDDM板在CAN_B上丢失"/>
+        
+        <entry key="0x0F" value="板卡是否在槽道上"/>
+        <entry key="0x0E" value="SDDM板在CAN_B上丢失"/>
+        
+        <entry key="0x48" value="CDDM板24V电源丢失"/>
+        <entry key="0x46" value="CDDM板12V电源丢失"/>
+        <entry key="0x55" value="CDDM板端口检测异常"/>
+        <entry key="0x57" value="CDDM板初始化失败"/>
+        <entry key="0x59" value="CDDM板FBJ采集异常"/>       
+        <entry key="0x7E" value="心跳超时（距离上次心跳包超过30s）"/>
+        <entry key="0x7F" value="Heart Beat"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="version" type="TypeTest.Common.Version, TypeTest">
+    <property name="Ver" value="1.00"/>
+    <property name="Build" value="20150501"/>
+  </object>
+  
+</objects>
